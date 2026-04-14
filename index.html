@@ -20,6 +20,7 @@
             --brown-light: #8D6E63;
             --warm-gray: #A1887F;
         }
+        html { scroll-behavior: smooth; }
         
         body {
             font-family: 'Inter', 'LXGW WenKai', sans-serif;
@@ -27,6 +28,7 @@
             color: var(--brown);
             overflow-x: hidden;
             line-height: 1.8;
+            backface-visibility: hidden;
         }
         
         .font-serif-cn { font-family: 'Noto Serif SC', 'LXGW WenKai', serif; }
@@ -197,12 +199,17 @@
             <div class="font-wenkai font-bold text-2xl tracking-wide text-[#5D4037]">
                 王韬媛<span class="text-[#F4A261]">.</span>HR
             </div>
+            
+            <div class="flex items-center md:hidden">
+                <button class="text-[#F4A261] text-xl">☰</button>
+            </div>
+            
             <div class="hidden md:flex space-x-8 text-sm font-medium text-[#8D6E63]">
                 <a href="#methodology" class="hover:text-[#F4A261] transition-colors">方法论</a>
                 <a href="#philosophy" class="hover:text-[#F4A261] transition-colors">职业思考</a>
                 <a href="#capabilities" class="hover:text-[#F4A261] transition-colors">能力模型</a>
             </div>
-            <a href="https://cdn.jsdelivr.net/gh/Ariaaa-652/resume/王韬媛-华南理工大学-应聘HR.pdf" 
+            <a href="https://cdn.jsdelivr.net/gh/Ariaaa-652/resume/王韬媛-华南理工大学-应聘HR岗位.pdf" 
                download 
                class="px-6 py-2.5 bg-[#F4A261] hover:bg-[#E76F51] text-white rounded-full text-sm font-semibold transition-all hover:scale-105 shadow-md shadow-orange-200">
                 下载简历
@@ -559,14 +566,6 @@
             opacity: 0,
             ease: "power3.out",
             delay: 0.5
-        });
-        
-        gsap.from(".hero-cta", {
-            duration: 0.8,
-            y: 20,
-            opacity: 0,
-            ease: "power3.out",
-            delay: 0.8
         });
 
         // Section reveal animations
